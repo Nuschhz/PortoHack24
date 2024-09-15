@@ -1,5 +1,6 @@
 .Drawer{
-background-color: #FF5D1B;
+background-color: #fafafa;
+border-right: 3px #FF5D1B solid;
 height: 100%;
 width: 15%;
 }
@@ -9,8 +10,8 @@ width: 15%;
     justify-content: center;
     align-items: center;
     padding: 12px;
-    color: #fafafa;
-    border: solid 1px #fafafa;
+    color: #FF5D1B;
+    border: solid 1px #FF5D1B;
     border-radius: 100px;
     transition: 250ms ease-in-out;
     margin: 20px 20px
@@ -18,8 +19,8 @@ width: 15%;
 
 .DrawerItem:hover{
     padding: 12px;
-    background-color: #fafafa;
-    color: #FF5D1B;
+    background-color: #FF5D1B;
+    color: #fafafa;
     border-radius: 100px;
     margin: 20px 20px;
 }

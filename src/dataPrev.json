@@ -57,7 +57,7 @@
   },
   {
     "data": "13/09/2024",
-    "periodo": "19:00/01:00",
+    "periodo": "23:00/01:00",
     "eta": "07/09/2024",
     "local": "TIPLAN",
     "nomenavio": "AI STRATIS",
@@ -85,7 +85,7 @@
   },
   {
     "data": "13/09/2024",
-    "periodo": "19:00/01:00",
+    "periodo": "19:00/10:00",
     "eta": "01/09/2024 05:00:00",
     "local": "TIPLAN",
     "nomenavio": "CALYPSO N",
@@ -113,7 +113,7 @@
   },
   {
     "data": "13/09/2024",
-    "periodo": "19:00/01:00",
+    "periodo": "18:00/01:00",
     "eta": "14/09/2024",
     "local": "EMBRAP",
     "nomenavio": "CAPE BYRON",

@@ -31,7 +31,7 @@ export default function DashCheg() {
   };
 
   const compare = () => {
-    const changedIndexes = []; // Lista para armazenar os índices alterados
+    const changedIndexes = [];
 
     dte.forEach((dteObj, index) => {
       let matchingObjB = aps.find((objB) => {
@@ -41,7 +41,7 @@ export default function DashCheg() {
       if (matchingObjB) {
         const isChanged = compareObjects(dteObj, matchingObjB);
         if (isChanged) {
-          changedIndexes.push(index); // Adiciona o índice alterado
+          changedIndexes.push(index);
         }
       } else {
         console.log(
@@ -49,11 +49,11 @@ export default function DashCheg() {
           aps[index]
         );
         Object.assign(dteObj, aps[index]);
-        changedIndexes.push(index); // Marca como alterado se o objeto foi atualizado
+        changedIndexes.push(index);
       }
     });
 
-    setChangedItems(changedIndexes); // Atualiza os itens alterados
+    setChangedItems(changedIndexes);
     console.log("dte atualizado:", dte);
   };
 
@@ -64,7 +64,7 @@ export default function DashCheg() {
         console.log(
           `Difference found in key: ${key}, A: ${objA[key]} ${objA.duv}, B: ${objB[key]} ${objB.duv}`
         );
-        hasChanged = true; // Define que houve uma alteração
+        hasChanged = true;
       }
     }
     return hasChanged;

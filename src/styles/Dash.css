@@ -15,9 +15,16 @@
     align-items: center;
 }
 .reset{
-    color: #ff5d1b;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: #FF5D1B;
     font-weight: 600;
+    transition: 230ms;
     cursor: pointer;
+}
+.reset:hover{
+color: #fafafa;
+background-color: #FF5D1B;
 }
 .DashCard {
     display: flex;
@@ -28,7 +35,7 @@
 }
 
 .Titles {
-    background-color: #ff5d1b;
+    background-color: #FF5D1B;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     font-weight: 600;
@@ -38,19 +45,20 @@
     height: fit-content;
     padding: 12px 0;
     font-size: 0.85rem;
-    text-align: center; /* Alinhamento central dos títulos */
+    text-align: center;
     line-height: 1.5;
 }
 
 .ItensTitles {
+    color: #fafafa;
     display: flex;
-    width: 25%; /* Ajuste para garantir que cada coluna ocupe 25% da largura */
+    width: 25%;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
-    white-space: nowrap; /* Evita quebras de linha */
+    white-space: nowrap;
 }
 
 .Itens0, .Itens1 {
@@ -64,7 +72,7 @@
 
 .Itens0item, .Itens1item {
     display: flex;
-    width: 25%; /* Alinhamento para 4 colunas */
+    width: 25%;
     align-items: center;
     justify-content: center;
     padding: 10px;
@@ -72,25 +80,24 @@
     box-sizing: border-box;
     font-size: 0.85rem;
     line-height: 1.5;
-    white-space: nowrap; /* Evita quebras de linha para manter o texto numa única linha */
+    white-space: nowrap;
 }
 
 .Itens0 {
     transition: 350ms ease-in-out;
-    background-color: #f0f0f0; /* Cor de fundo para linhas pares */
+    background-color: #f0f0f0;
 }
 
 .Itens1 {
     transition: 350ms ease-in-out;
-    background-color: #d4d4d4; /* Cor de fundo para linhas ímpares */
+    background-color: #d4d4d4;
 }
 
 .itemContainer {
     overflow: auto;
-    width: 100%; /* Garante que o container ocupe 100% da largura */
+    width: 100%;
 }
 
-/* Estilo da barra de rolagem */
 .itemContainer::-webkit-scrollbar {
     width: 4px;
 }
@@ -107,6 +114,6 @@
     background: #a3a3a3;
 }
 .changed {
-    background-color: #4ade80;
+    background-color: #d9f99d;
     color: white;
   }

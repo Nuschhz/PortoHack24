@@ -15,11 +15,10 @@ const ItensTitles = [
 ];
 
 export default function Dash() {
-  const [aps, setAps] = useState([]); // Estado que armazena os dados da API
-  const [changedItems, setChangedItems] = useState([]); // Estado para armazenar os itens alterados
+  const [aps, setAps] = useState([]);
+  const [changedItems, setChangedItems] = useState([]);
   const apiCalled = useRef(false);
 
-  // Função para buscar os dados da API
   const fetchData = async () => {
     try {
       const response = await axios.get(
@@ -31,9 +30,8 @@ export default function Dash() {
     }
   };
 
-  // Função para comparar e atualizar os dados
   const compare = () => {
-    const changedIndexes = []; // Lista para armazenar os índices alterados
+    const changedIndexes = [];
 
     dte.forEach((dteObj, index) => {
       let matchingObjB = aps.find((objB) => {
@@ -43,7 +41,7 @@ export default function Dash() {
       if (matchingObjB) {
         const isChanged = compareObjects(dteObj, matchingObjB);
         if (isChanged) {
-          changedIndexes.push(index); // Adiciona o índice alterado
+          changedIndexes.push(index);
         }
       } else {
         console.log(
@@ -51,15 +49,14 @@ export default function Dash() {
           aps[index]
         );
         Object.assign(dteObj, aps[index]);
-        changedIndexes.push(index); // Marca como alterado se o objeto foi atualizado
+        changedIndexes.push(index);
       }
     });
 
-    setChangedItems(changedIndexes); // Atualiza os itens alterados
+    setChangedItems(changedIndexes);
     console.log("dte atualizado:", dte);
   };
 
-  // Função para comparar objetos
   function compareObjects(objA, objB) {
     let hasChanged = false;
     for (let key in objA) {
@@ -67,7 +64,7 @@ export default function Dash() {
         console.log(
           `Difference found in key: ${key}, A: ${objA[key]} ${objA.duv}, B: ${objB[key]} ${objB.duv}`
         );
-        hasChanged = true; // Define que houve uma alteração
+        hasChanged = true;
       }
     }
     return hasChanged;
@@ -78,9 +75,16 @@ export default function Dash() {
       fetchData();
       apiCalled.current = true;
     }
-  }, []);
 
-  // Handler que será chamado ao clicar no botão reset
+    const intervalId = setInterval(() => {
+      fetchData().then(() => {
+        compare();
+      });
+    }, 10000);
+
+    return () => clearInterval(intervalId);
+  }, [aps]);
+
   const handleReset = () => {
     fetchData().then(() => {
       compare();
@@ -108,7 +112,7 @@ export default function Dash() {
             <div
               className={`Itens${index % 2} ${
                 changedItems.includes(index) ? "changed" : ""
-              }`} // Classe condicional para itens alterados
+              }`}
               key={index}
             >
               <span className={`Itens${index % 2}item`}>{item.viagem}</span>
