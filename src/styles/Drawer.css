@@ -1,0 +1,12 @@
+.Drawer{
+background-color: #FF5D1B;
+height: 100%;
+width: 15%;
+}
+.DrawerItem{
+    padding: 12px;
+    color: #fafafa;
+    border: solid 1px #fafafa;
+    border-radius: 100px;
+    margin: 20px 20px
+}

@@ -1,0 +1,106 @@
+.Dash {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.controller{
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.reset{
+    color: #ff5d1b;
+    font-weight: 600;
+    cursor: pointer;
+}
+.DashCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+    width: 75%;
+    height: 80%;
+}
+
+.Titles {
+    background-color: #ff5d1b;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    padding: 12px 0;
+    font-size: 0.85rem;
+    text-align: center; /* Alinhamento central dos títulos */
+    line-height: 1.5;
+}
+
+.ItensTitles {
+    display: flex;
+    width: 25%; /* Ajuste para garantir que cada coluna ocupe 25% da largura */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    white-space: nowrap; /* Evita quebras de linha */
+}
+
+.Itens0, .Itens1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.Itens0item, .Itens1item {
+    display: flex;
+    width: 25%; /* Alinhamento para 4 colunas */
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    white-space: nowrap; /* Evita quebras de linha para manter o texto numa única linha */
+}
+
+.Itens0 {
+    background-color: #f0f0f0; /* Cor de fundo para linhas pares */
+}
+
+.Itens1 {
+    background-color: #d4d4d4; /* Cor de fundo para linhas ímpares */
+}
+
+.itemContainer {
+    overflow: auto;
+    width: 100%; /* Garante que o container ocupe 100% da largura */
+}
+
+/* Estilo da barra de rolagem */
+.itemContainer::-webkit-scrollbar {
+    width: 4px;
+}
+
+.itemContainer::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+
+.itemContainer::-webkit-scrollbar-thumb {
+    background: #a3a3a3;
+}
+
+.itemContainer::-webkit-scrollbar-thumb:hover {
+    background: #a3a3a3;
+}
