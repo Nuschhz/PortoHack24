@@ -76,10 +76,12 @@
 }
 
 .Itens0 {
+    transition: 350ms ease-in-out;
     background-color: #f0f0f0; /* Cor de fundo para linhas pares */
 }
 
 .Itens1 {
+    transition: 350ms ease-in-out;
     background-color: #d4d4d4; /* Cor de fundo para linhas ímpares */
 }
 
@@ -104,3 +106,7 @@
 .itemContainer::-webkit-scrollbar-thumb:hover {
     background: #a3a3a3;
 }
+.changed {
+    background-color: #4ade80;
+    color: white;
+  }
